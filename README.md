@@ -50,7 +50,16 @@ During behavioral verification, several timing artifacts and latency conditions 
 
 The design was fully validated under behavioral simulation using the Xilinx Vivado XSim compiler engine. The simulation environment maps a **100MHz `wclk` (10ns period)** directly against an asynchronous **50MHz `rclk` (20ns period)**.
 
-### Complete System Verification Logs
+### Behavioral Waveform Execution Tracking
+Below is the captured hardware simulation timeline highlighting the synchronization delays across clock domain crossings, the assertion of the full flag boundary condition, and subsequent sequential read drains:
+
+![Vivado Functional Simulation Waveform](async_wave.png)
+
+### Tcl Console Output Logs
+The printed console report verifies perfect data sequence tracking, full-buffer write safety blocks, and zero-delay empty-flag hardware shutdowns:
+
+![Vivado Simulation Tcl Console Output](async_tcl.png)
+
 ```text
 Starting Testbench: Fast write and slow read
 [WRITE] Time: 55000 | Data In: 10
