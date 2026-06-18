@@ -58,7 +58,6 @@ Below is the captured hardware simulation timeline highlighting the synchronizat
 ### Tcl Console Output Logs
 The printed console report verifies perfect data sequence tracking, full-buffer write safety blocks, and zero-delay empty-flag hardware shutdowns:
 
-![Vivado Simulation Tcl Console Output](async_console.png)
 
 ```text
 Starting Testbench: Fast write and slow read
